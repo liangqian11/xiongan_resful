@@ -41,7 +41,7 @@ const conf = {
         host:       "localhost",
         port:       6379
       },
-      domain:       '192.168.0.100',
+      domain:       '192.168.0.97',
       path:         '/',
     },
     mysql: {
@@ -82,7 +82,7 @@ const conf = {
         host:       "localhost",
         port:       6379
       },
-      domain:       '192.168.0.100',
+      domain:       '192.168.0.97',
       path:         '/',
     },
     mysql: {
