@@ -41,18 +41,18 @@ const conf = {
         host:       "localhost",
         port:       6379
       },
-      domain:       '192.168.0.100',
+      domain:       '192.168.1.45',
       path:         '/',
     },
     mysql: {
       main: {
-        host:       "192.168.0.96",
+        host:       "192.168.1.45",
         user:       "root",
         password:   "123456",
         database:   "xiongan"
       },
       user: {
-        host:       "192.168.0.96",
+        host:       "192.168.1.45",
         user:       "root",
         password:   "123456",
         database:   "he_user"
@@ -82,18 +82,18 @@ const conf = {
         host:       "localhost",
         port:       6379
       },
-      domain:       '192.168.0.100',
+      domain:       '192.168.1.45',
       path:         '/',
     },
     mysql: {
       main: {
-        host:       "192.168.0.96",
+        host:       "192.168.1.45",
         user:       "root",
         password:   "123456",
         database:   "xiongan"
       },
       user: {
-        host:       "192.168.0.96",
+        host:       "192.168.1.45",
         user:       "root",
         password:   "123456",
         database:   "he_user"
