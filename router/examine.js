@@ -1,7 +1,34 @@
 // ---------------------------------------------------------------------------- GET
 exports.get = {
-  /**
+    /**
    * 公司列表
+   */
+  '/get_company/list':async(ctx,next) => {
+    let data = await $.mysql.query($.conf.mysql.main,'select * from company where examine = 1 order by id')
+    ctx.result.ok.data = data
+    $.flush(ctx, ctx.result.ok)
+  },
+    /**
+   * 公司列表详情
+   */
+  '/get_company/datail/:id':async(ctx,next) => {
+    let id = ctx.params.id
+    let data = await $.mysql.query($.conf.mysql.main,'select * from company where examine = 1 and id=?',[id])
+    ctx.result.ok.data = data
+    $.flush(ctx, ctx.result.ok)
+  },
+    /**
+   * 公司列表详情的发布岗位
+   */
+  '/get_job/datail/:id':async(ctx,next) => {
+    let id = ctx.params.id
+    let data = await $.mysql.query($.conf.mysql.main,'select A.id,A.examine, B.* from company A, job B where A.id = B.cid and A.examine=1 and A.id = ?',[id])
+    ctx.result.ok.data = data
+    $.flush(ctx, ctx.result.ok)
+  },
+
+  /**
+   * 公司审核列表
    */
   '/company/list':async(ctx,next) => {
     let data = await $.mysql.query($.conf.mysql.main,'select * from company where examine = 0 order by id')
